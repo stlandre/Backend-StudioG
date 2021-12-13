@@ -39,6 +39,7 @@ func GenerateSublistLinear(list []int) (int, []int, []int) {
 		maxAteAgora = Max(maxAteAgora, maxTerminandoAqui)
 	}
 
+	//gerando as posiçoes e a sublista de maior soma
 	positions := []int{}
 	sublist := []int{}
 

@@ -59,27 +59,14 @@ func PreencheList(list []*int) []int {
 	return lista
 }
 
-/* func PreencheListPointer(list []int) []*int {
-	lista := []*int{}
-	for i := 0; i < len(list); i++ {
-		lista[i] = &list[i]
-	}
-
-	return lista
-} */
-
 func (r *mutationResolver) Maxsum(ctx context.Context, list []int) (*model.Resposta, error) {
 
-	soma, positions, sublist := GenerateSublistLinear(list) //PreencheList(list))
-	//positions, sublist
-
-	//posicao := PreencheListPointer(positions)
-	//sublista := PreencheListPointer(sublist)
+	soma, positions, sublist := GenerateSublistLinear(list)
 
 	resposta := &model.Resposta{
 		Sum:       soma,
-		Positions: positions, //posicao,
-		Sublist:   sublist,   //sublista,
+		Positions: positions,
+		Sublist:   sublist,
 	}
 
 	return resposta, nil

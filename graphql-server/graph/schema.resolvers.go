@@ -5,13 +5,84 @@ package graph
 
 import (
 	"context"
-	"fmt"
 	"graphql-server/graph/generated"
 	"graphql-server/graph/model"
 )
 
-func (r *mutationResolver) Maxsum(ctx context.Context, list []*int) (*model.Resposta, error) {
-	panic(fmt.Errorf("not implemented"))
+func Max(a int, b int) int {
+	if a <= b {
+		return b
+	} else {
+		return a
+	}
+}
+
+func GenerateSublistLinear(list []int) (int, []int, []int) {
+	indiceHead := 0
+	indiceTail := 0
+	maxTerminandoAqui := list[0]
+	maxAteAgora := list[0]
+
+	for i := 1; i < len(list); i++ {
+		if Max(list[i], maxTerminandoAqui+list[i]) == list[i] {
+			if Max(maxAteAgora, list[i]) == list[i] {
+				indiceHead = i
+			}
+		}
+
+		maxTerminandoAqui = Max(list[i], maxTerminandoAqui+list[i])
+
+		if Max(maxAteAgora, maxTerminandoAqui) == maxTerminandoAqui {
+			indiceTail = i
+		}
+
+		maxAteAgora = Max(maxAteAgora, maxTerminandoAqui)
+	}
+
+	positions := []int{}
+	sublist := []int{}
+
+	for i := indiceHead; i <= indiceTail; i++ {
+		positions = append(positions, i+1)
+		sublist = append(sublist, list[i])
+	}
+
+	return maxAteAgora, positions, sublist
+}
+
+func PreencheList(list []*int) []int {
+	lista := []int{}
+	for i := 0; i < len(list); i++ {
+		lista[i] = *list[i]
+	}
+
+	return lista
+}
+
+/* func PreencheListPointer(list []int) []*int {
+	lista := []*int{}
+	for i := 0; i < len(list); i++ {
+		lista[i] = &list[i]
+	}
+
+	return lista
+} */
+
+func (r *mutationResolver) Maxsum(ctx context.Context, list []int) (*model.Resposta, error) {
+
+	soma, positions, sublist := GenerateSublistLinear(list) //PreencheList(list))
+	//positions, sublist
+
+	//posicao := PreencheListPointer(positions)
+	//sublista := PreencheListPointer(sublist)
+
+	resposta := &model.Resposta{
+		Sum:       soma,
+		Positions: positions, //posicao,
+		Sublist:   sublist,   //sublista,
+	}
+
+	return resposta, nil
 }
 
 // Mutation returns generated.MutationResolver implementation.

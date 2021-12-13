@@ -1,9 +1,9 @@
 type Resposta {
-  sum: Int
-  positions: [Int]
-  sublist: [Int]
+  sum: Int!
+  positions: [Int!]!
+  sublist: [Int!]!
 }
 
 type Mutation {
-  maxsum(list: [Int]!): Resposta
+  maxsum(list: [Int!]!): Resposta!
 }

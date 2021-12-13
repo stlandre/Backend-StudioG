@@ -3,7 +3,7 @@
 package model
 
 type Resposta struct {
-	Sum       *int   `json:"sum"`
-	Positions []*int `json:"positions"`
-	Sublist   []*int `json:"sublist"`
+	Sum       int   `json:"sum"`
+	Positions []int `json:"positions"`
+	Sublist   []int `json:"sublist"`
 }

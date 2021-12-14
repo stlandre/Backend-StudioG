@@ -90,6 +90,11 @@ Requisição 2
 
 ![img](https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/respostaRequisicao2.jpg)
 
+Além desse tipo de requisição, podemos adicionar o atributo `sublist` no corpo da requisição para obtermos a sub-lista de maior soma. Não era necessário, mas achei interessante colocar essa disponibilidade de informação, caso seja de interesse do cliente:
+![img]()
+
+![img]()
+
 [1]: https://youtu.be/UncRSviH-cY?list=PLCNsY09SiMaTKBw91MkXOiJCPMQR0tlOA&t=906
 [2]: https://pt.wikipedia.org/wiki/Sublista_cont%C3%ADgua_de_soma_m%C3%A1xima#Solu%C3%A7%C3%A3o_linear
 [3]: https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go

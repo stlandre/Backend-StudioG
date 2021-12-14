@@ -3,10 +3,10 @@ Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL
 
 <!--ts-->
    * [O problema](#o-problema-fire)
-   * [Solução e performance do Algoritmo](#solução-e-performance-do-algoritmo-)
+   * [Solução e performance do Algoritmo](#solução-e-performance-do-algoritmo-sweat_drops)
    * [Design da implementação](#design-da-implementação-mag)
       * [Construção do server](#construção-do-server-computer)
-   * [Rodando este projeto](#rodando-este-projeto-backend-studiog-hammer-sweat_drops)
+   * [Rodando este projeto](#rodando-este-projeto-backend-studiog-hammer)
 <!--te-->
 
 <h4 align="center"> 

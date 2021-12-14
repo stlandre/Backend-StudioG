@@ -10,7 +10,7 @@ Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL
 <!--te-->
 
 <h4 align="center"> 
-	:runner:  Backend-StudioG :musical_score: Finalizado :checkered_flag:
+	:runner:  Backend-StudioG :runner: Finalizado :checkered_flag:
 </h4>
 
 <div align="center">

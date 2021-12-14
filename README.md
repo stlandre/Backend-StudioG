@@ -78,6 +78,18 @@ Talvez seja necessário buscar alguma biblioteca em `github.com/99designs/gqlgen
 
 Em seu navegador, acesse `http://localhost:8080`.
 
+Agora é só colocar requisições como a das imagens abaixo:
+
+Requisição 1
+![img](https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/requisicao1.jpg)
+
+![img](https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/respostaRequisicao1.jpg)
+
+Requisição 2
+![img](https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/requisicao2.jpg)
+
+![img](https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/respostaRequisicao2.jpg)
+
 [1]: https://youtu.be/UncRSviH-cY?list=PLCNsY09SiMaTKBw91MkXOiJCPMQR0tlOA&t=906
 [2]: https://pt.wikipedia.org/wiki/Sublista_cont%C3%ADgua_de_soma_m%C3%A1xima#Solu%C3%A7%C3%A3o_linear
 [3]: https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go

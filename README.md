@@ -18,12 +18,12 @@ a sub-lista contínua que possui maior soma é
 que resultam, juntos, em uma soma igual a 11. Logo, as posições que fazem parte da solução final são: 2, 3, 4 e 5.
 
 ## Solução e performance do Algoritmo
-A princípio, escrevi um algoritmo que montava todas sub-listas contínuas e verificava qual delas tinha maior soma. O problema apresentado acima seria facilmente resolvido ao implementar tal algoritmo. Como matemático, me perguntava: "seria possível escrever um algoritmo com menos esforço computacional?". Realizei algumas pesquisas e descobri que tal solução já foi apresentada pelo estatístico Jay Kadane, que leva seu nome (algoritmo de Kadane). Além disso, pude perceber que minha solução inicial foi de ordem quadrática. Já a solução de Kadane é de ordem linear ou seja, mais performática. Desta forma, optei por implementar o algoritmo de Kadane. Este [video](https://youtu.be/UncRSviH-cY?list=PLCNsY09SiMaTKBw91MkXOiJCPMQR0tlOA&t=906) e este [artigo](https://pt.wikipedia.org/wiki/Sublista_cont%C3%ADgua_de_soma_m%C3%A1xima#Solu%C3%A7%C3%A3o_linear) foram tomados como referência. Além disso, precisei adicionar algumas condições para obter as informações necessárias para produzir a resposta final. Você pode perceber essas condições nas linhas [27](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go#L27-L32) e [36](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go#L36-L39) do arquivo [schema.resolvers.go](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go). Essas condições servem para identificar quando minha sub-lista de maior soma começa e quando ela termina.
+A princípio, escrevi um algoritmo que montava todas sub-listas contínuas e verificava qual delas tinha maior soma. O problema apresentado acima seria facilmente resolvido ao implementar tal algoritmo. Como matemático, me perguntava: "seria possível escrever um algoritmo com menos esforço computacional?". Realizei algumas pesquisas e descobri que tal solução já foi apresentada pelo estatístico Jay Kadane, que leva seu nome (algoritmo de Kadane). Além disso, pude perceber que minha solução inicial foi de ordem quadrática. Já a solução de Kadane é de ordem linear ou seja, mais performática. Desta forma, optei por implementar o algoritmo de Kadane. Este [video][1] e este [artigo][2] foram tomados como referência. Além disso, precisei adicionar algumas condições para obter as informações necessárias para produzir a resposta final. Você pode perceber essas condições nas linhas [27](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go#L27-L32) e [36](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go#L36-L39) do arquivo [schema.resolvers.go][2]. Essas condições servem para identificar quando minha sub-lista de maior soma começa e quando ela termina.
 
 Basicamente, foram criadas duas funções no arquivo schema.resolvers.go: [func Max(a int, b int) int](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go#L12-L18) e [func GenerateSublistLinear(list []int) (int, []int, []int)](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go#L20-L54), onde está implementado o algoritmo de Kadane junto com as condições citadas anteriormente.
 
 ## Design da implementação
-Para construir o server GraphQL, optei por utilizar uma biblioteca Go chamada [gqlgen](https://gqlgen.com/). Mais abaixo, você encontrará um passo a passo de como levantar este server. Em resumo, com esta biblioteca, tudo o que precisaremos fazer é implementar nosso [Schema](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.graphqls) e as funções necessárias no arquivo [schema.resolvers.go](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go). Os outros arquivos são gerados automaticamente por essa biblioteca.
+Para construir o server GraphQL, optei por utilizar uma biblioteca Go chamada [gqlgen](https://gqlgen.com/). Mais abaixo, você encontrará um passo a passo de como levantar este server. Em resumo, com esta biblioteca, tudo o que precisaremos fazer é implementar nosso [Schema](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.graphqls) e as funções necessárias no arquivo [schema.resolvers.go][3]. Os outros arquivos são gerados automaticamente por essa biblioteca.
 
 ### Construção do server
 Garanta que o Go está devidamente instalado e configurado na sua máquina. Dentro da pasta do seu projeto, crie uma subpasta com nome de sua preferência (no meu caso, criei com nome `graphql-server`)
@@ -57,7 +57,7 @@ $ go get github.com/99designs/gqlgen/internal/code@v0.14.0
 ```
 Sempre fique atento ao terminal.
 
-Depois disso, você poderá realizar as modificações necessárias para sua aplicação no arquivo [schema.resolvers.go](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go).
+Depois disso, você poderá realizar as modificações necessárias para sua aplicação no arquivo [schema.resolvers.go][3].
 
 Feito isso, entre na pasta `graph-server` e rode
 
@@ -78,3 +78,6 @@ Talvez seja necessário buscar alguma biblioteca em `github.com/99designs/gqlgen
 
 Em seu navegador, acesse `http://localhost:8080`.
 
+[1]: https://youtu.be/UncRSviH-cY?list=PLCNsY09SiMaTKBw91MkXOiJCPMQR0tlOA&t=906
+[2]: https://pt.wikipedia.org/wiki/Sublista_cont%C3%ADgua_de_soma_m%C3%A1xima#Solu%C3%A7%C3%A3o_linear
+[3]: https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go

@@ -9,6 +9,11 @@ Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL
    * [Rodando este projeto](#rodando-este-projeto-backend-studiog)
 <!--te-->
 
+<h4 align="center"> 
+	:runner:  Backend-StudioG :musical_score: Finalizado :checkered_flag:
+</h4>
+<img src= "https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/music.svg" align="center">
+
 ## O problema
 Dada uma lista de números inteiros, o objetivo é encontrar quais as posições da lista possume a maior soma obtida a partir de uma sub-lista contínua não vazia.
 Por exemplo, dada a lista abaixo

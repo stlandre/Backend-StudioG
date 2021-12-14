@@ -1,6 +1,14 @@
 # Backend-StudioG
 Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL.
 
+<!--ts-->
+   * [O problema](#o-problema)
+   * [Solução e performance do Algoritmo](#solucao-e-performance-do-algoritmo)
+   * [Design da implementação](#design-da-implementacao)
+      * [Construção do server](#construcao-do-server)
+   * [Rodando este projeto](#rodando-este-projeto)
+<!--te-->
+
 ## O problema
 Dada uma lista de números inteiros, o objetivo é encontrar quais as posições da lista possume a maior soma obtida a partir de uma sub-lista contínua não vazia.
 Por exemplo, dada a lista abaixo

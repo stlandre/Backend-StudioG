@@ -26,7 +26,7 @@ Basicamente, foram criadas duas funções no arquivo schema.resolvers.go: [func 
 Para construir o server GraphQL, optei por utilizar uma biblioteca Go chamada [gqlgen](https://gqlgen.com/). Mais abaixo, você encontrará um passo a passo de como levantar este server. Em resumo, com esta biblioteca, tudo o que precisaremos fazer é implementar nosso [Schema](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.graphqls) e as funções necessárias no arquivo [schema.resolvers.go](https://github.com/stlandre/Backend-StudioG/blob/main/graphql-server/graph/schema.resolvers.go). Os outros arquivos são gerados automaticamente por essa biblioteca.
 
 ### Construção do server
-Garanta que o Go está devidamente instalado e configurado na sua máquina. Dentro da pasta do seu projeto, cria uma subpasta com nome de sua preferência (no meu caso, criei com nome `graphql-server`)
+Garanta que o Go está devidamente instalado e configurado na sua máquina. Dentro da pasta do seu projeto, crie uma subpasta com nome de sua preferência (no meu caso, criei com nome `graphql-server`)
 
 * $ cd graphql-server
 * $ go mod init graphql-server
@@ -74,7 +74,7 @@ Feito o download, entre na pasta do projeto e rode
 $ cd graph-server
 $ go run server.go
 ```
-Talvez seja necessário buscar alguma biblioteca em `github.com/99designs/gqlgen/` com o comando `$ go get`, como mostrado anteriormente.
+Talvez seja necessário buscar alguma biblioteca em `github.com/99designs/gqlgen/` com o comando `$ go get`, como mostrado anteriormente na subseção `Construção do server`.
 
 Em seu navegador, acesse `http://localhost:8080`.
 

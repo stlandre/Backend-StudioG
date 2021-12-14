@@ -6,7 +6,7 @@ Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL
    * [Solução e performance do Algoritmo](#solução-e-performance-do-algoritmo)
    * [Design da implementação](#design-da-implementação)
       * [Construção do server](#construção-do-server)
-   * [Rodando este projeto](#rodando-este-projeto-[Backend-StudioG])
+   * [Rodando este projeto](#rodando-este-projeto-backend-studiog)
 <!--te-->
 
 ## O problema

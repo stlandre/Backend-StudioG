@@ -24,6 +24,7 @@ func GenerateSublistLinear(list []int) (int, []int, []int) {
 	maxAteAgora := list[0]
 
 	for i := 1; i < len(list); i++ {
+		//bloco (1) de condições
 		if Max(list[i], maxTerminandoAqui+list[i]) == list[i] {
 			if Max(maxAteAgora, list[i]) == list[i] {
 				indiceHead = i
@@ -32,6 +33,7 @@ func GenerateSublistLinear(list []int) (int, []int, []int) {
 
 		maxTerminandoAqui = Max(list[i], maxTerminandoAqui+list[i])
 
+		//bloco (2) de condições
 		if Max(maxAteAgora, maxTerminandoAqui) == maxTerminandoAqui {
 			indiceTail = i
 		}

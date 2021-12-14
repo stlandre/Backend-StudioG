@@ -12,8 +12,10 @@ Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL
 <h4 align="center"> 
 	:runner:  Backend-StudioG :musical_score: Finalizado :checkered_flag:
 </h4>
-<img src= "https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/music.svg" align="center" heigh="200" width="200">
 
+<div align="center">
+    <img src= "https://github.com/stlandre/Backend-StudioG/blob/main/to_readme/music.svg" heigh="150" width="150">
+</div>
 ## O problema
 Dada uma lista de números inteiros, o objetivo é encontrar quais as posições da lista possume a maior soma obtida a partir de uma sub-lista contínua não vazia.
 Por exemplo, dada a lista abaixo

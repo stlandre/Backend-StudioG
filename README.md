@@ -3,10 +3,10 @@ Solução backend desenvolvida em GoLang (go1.17.5) utilizando um server GraphQL
 
 <!--ts-->
    * [O problema](#o-problema)
-   * [Solução e performance do Algoritmo](#solucao-e-performance-do-algoritmo)
-   * [Design da implementação](#design-da-implementacao)
-      * [Construção do server](#construcao-do-server)
-   * [Rodando este projeto](#rodando-este-projeto)
+   * [Solução e performance do Algoritmo](#solução-e-performance-do-algoritmo)
+   * [Design da implementação](#design-da-implementação)
+      * [Construção do server](#construção-do-server)
+   * [Rodando este projeto](#rodando-este-projeto-[Backend-StudioG])
 <!--te-->
 
 ## O problema

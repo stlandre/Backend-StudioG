@@ -18,10 +18,10 @@ func Max(a int, b int) int {
 }
 
 func GenerateSublistLinear(list []int) (int, []int, []int) {
-	indiceHead := 0
-	indiceTail := 0
-	maxTerminandoAqui := list[0]
-	maxAteAgora := list[0]
+	indiceHead := 0              //indice da primeira posição da sub-lista de maior soma (sub-lista candidata)
+	indiceTail := 0              //indice da última posição da sub-lista de maior soma (sub-lista candidata)
+	maxTerminandoAqui := list[0] //soma da sub-lista candidata atual
+	maxAteAgora := list[0]       //soma da sub-lista de maior soma
 
 	for i := 1; i < len(list); i++ {
 		//bloco (1) de condições

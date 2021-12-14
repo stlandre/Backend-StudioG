@@ -53,15 +53,6 @@ func GenerateSublistLinear(list []int) (int, []int, []int) {
 	return maxAteAgora, positions, sublist
 }
 
-func PreencheList(list []*int) []int {
-	lista := []int{}
-	for i := 0; i < len(list); i++ {
-		lista[i] = *list[i]
-	}
-
-	return lista
-}
-
 func (r *mutationResolver) Maxsum(ctx context.Context, list []int) (*model.Resposta, error) {
 
 	soma, positions, sublist := GenerateSublistLinear(list)
